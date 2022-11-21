@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('static-test') {
       steps {
-        powershell 'cd D:\\jenkins_workspace D:\\install\\SkyEye\\lib\\python35\\python.exe static_test.py '
+        powershell 'cd D:\\jenkins_workspace python static_test.py '
       }
     }
 
