@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('static-test') {
       steps {
-        powershell 'cd D:\\jenkins_workspace python static_test.py '
+        powershell(script: 'cd D:\\jenkins_workspace', encoding: 'utf-8', label: 'whnNote')
+        powershell(script: 'python static_test.py ', encoding: 'utf-8', label: 'whnNote')
       }
     }
 
