@@ -1,0 +1,4 @@
+3
+tst_a 	 					DT_SINT32
+tst_b 	 					DT_SINT32
+tst_c 	 					DT_SINT32

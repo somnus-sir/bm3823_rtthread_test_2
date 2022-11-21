@@ -1,0 +1,5 @@
+#define-conf bm3823_rtthread_test_2.json
+#load-binary sparc_v8_0 binary/rtthread.elf
+#parse-symbol sparc_v8_0 binary/rtthread.elf
+#init-ok
+run-pyfile bm3823_rtthread_test_2.py

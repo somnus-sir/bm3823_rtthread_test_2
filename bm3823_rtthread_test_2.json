@@ -1,0 +1,60 @@
+{
+    "base_mach_0" : {
+        "base" : "mach",
+        "class" : "base_mach",
+        "sparc_v8_0" : {
+            "base" : "cpu",
+            "class" : "sparc_v8",
+            "memory_space" : [
+                [ 1, "iface", "memory_space_0", "1" ]
+            ],
+            "freq_hz" : [ "uinteger", "5000000" ],
+            "mode" : [ "uinteger", "0" ]
+        },
+        "memory_space_0" : {
+            "base" : "device",
+            "class" : "memory_space",
+            "memory_space" : [
+                [ 1, "iface", "ram_0", "0x20000000", "0x1000000" ],
+                [ 2, "iface", "bm3823_intc_0", "0x80000000", "0x100" ],
+                [ 3, "iface", "bm3823_system_control_0", "0x81000000", "0x100" ]
+            ]
+        },
+        "ram_0" : {
+            "base" : "device",
+            "class" : "ram",
+            "memory_space" : [
+                [ 1, "iface", "image_0", "0" ]
+            ]
+        },
+        "image_0" : {
+            "base" : "device",
+            "class" : "image",
+            "size" : [ "uinteger", "0x1000000" ]
+        },
+        "bm3823_system_control_0" : {
+            "base" : "device",
+            "class" : "bm3823_system_control",
+            "skyeye_uart_intf" : [
+                [ 1, "iface", "uart_term_0", "1" ]
+            ],
+            "general_signal_intf" : [
+                [ 1, "iface", "bm3823_intc_0", "0" ]
+            ]
+        },
+        "bm3823_intc_0" : {
+            "base" : "device",
+            "class" : "bm3823_intc",
+            "core_signal_intf" : [
+                [ 1, "iface", "sparc_v8_0", "0" ]
+            ]
+        },
+        "uart_term_0" : {
+            "base" : "device",
+            "class" : "uart_term",
+            "serial_device_intf" : [
+                [ 1, "iface", "bm3823_system_control_0", "0" ]
+            ]
+        }
+    }
+}

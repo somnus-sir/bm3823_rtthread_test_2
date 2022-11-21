@@ -1,0 +1,3 @@
+define-conf bm3823_rtthread_test.json
+init-ok
+run-pyfile bm3823_rtthread_test.py
