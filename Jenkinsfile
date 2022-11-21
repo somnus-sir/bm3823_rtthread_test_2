@@ -20,4 +20,7 @@ pipeline {
     }
 
   }
+  environment {
+    python = 'D:\\install\\SkyEye\\lib\\python35\\python.exe'
+  }
 }
